@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Comprehensive Input Attributes Example</title>
+  </head>
+  <body>
+    <h2>Form Demonstrating Various Input Attributes</h2>
+    <form>
+      <!-- The required attribute specifies that an input field must be filled out before submitting the form. It enforces that the user cannot submit the form without completing this field.-->
+      <label for="username">Username (required):</label>
+      <input type="text" id="username" name="username" required />
+      <br /><br />
+
+      <!-- The multiple attribute is used with file input fields to allow the selection of multiple files. It can also be used with <select> elements to allow multiple selections.-->
+      <label for="files">Upload files (multiple):</label>
+      <input type="file" id="files" name="files" multiple />
+      <br /><br />
+
+      <!-- The disabled attribute disables an input field, making it uneditable and unclickable. Disabled fields are not included in form submission. -->
+      <label for="email">Email (disabled):</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        value="user@example.com"
+        disabled
+      />
+      <br /><br />
+
+      <!-- The readonly attribute makes an input field read-only. The user can see the value but cannot change it. Read-only fields are included in form submissions. -->
+      <label for="api-key">API Key (readonly):</label>
+      <input type="text" id="api-key" name="api-key" value="12345" readonly />
+      <br /><br />
+
+      <!-- The maxlength attribute sets the maximum number of characters that can be entered in an input field. -->
+      <label for="bio">Bio (maxlength 100):</label>
+      <input type="text" id="bio" name="bio" maxlength="100" />
+      <br /><br />
+
+      <!-- The size attribute specifies the visible width of an input field in characters. It does not limit the number of characters that can be entered. -->
+      <label for="short-text">Short Text (size 20):</label>
+      <input type="text" id="short-text" name="short-text" size="20" />
+      <br /><br />
+
+      <!-- The autofocus attribute automatically focuses on the input field when the page loads. It is useful for improving user experience by directing focus to the most relevant field. -->
+      <label for="name">Name (autofocus):</label>
+      <input type="text" id="name" name="name" autofocus />
+      <br /><br />
+
+      <!-- The pattern attribute specifies a regular expression that the input's value must match to be considered valid. It is used for custom validation. -->
+      <label for="phone">Phone Number (format: 123-456-7890):</label>
+      <input
+        type="text"
+        id="phone"
+        name="phone"
+        pattern="\d{3}-\d{3}-\d{4}"
+        placeholder="123-456-7890"
+      />
+      <br /><br />
+
+      <!-- The pattern attribute specifies a regular expression that the input's value must match to be considered valid. It is used for custom validation. -->
+      <label for="quantity">Quantity (between 1 and 100):</label>
+      <input type="number" id="quantity" name="quantity" min="1" max="100" />
+      <br /><br />
+
+      <label for="start-date">Start Date:</label>
+      <input
+        type="date"
+        id="start-date"
+        name="start-date"
+        min="2024-01-01"
+        max="2024-12-31"
+      />
+      <br /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
